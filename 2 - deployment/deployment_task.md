@@ -13,11 +13,15 @@ Also found same result for answer using kubectl get rs -o wide. in my case the n
 ### *hint* - ``` kubectcl get rs --show-labels```
 
 ```
-enter answer here
+I noticed two things:
+1) I got a new unique deployment/replica
+2) the labels are auto-sorted (alphabetically) and not by list order in manifest
 ```
 
 ### 3 - What is the command for rolling back a deployment to revision 1?
 
 ```
-enter command here
+kubectl rollout undo deployment.v1.apps/nginx-deployment
+kubectl rollout undo deployment.v1.apps/nginx-deployment --to-revision=1
+
 ```
