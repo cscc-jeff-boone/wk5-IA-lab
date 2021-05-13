@@ -3,7 +3,8 @@
 ### 1 - Enter command for scaling the replica set
 
 ```
-enter command here
+kubectl scale --replicas=3 -f manifests/replica_1.yml
+
 ```
 
 ### 2 - What happened after applying another pod with matching selectors as the ReplicaSet?
