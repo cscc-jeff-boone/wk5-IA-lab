@@ -22,6 +22,7 @@ I noticed two things:
 
 ```
 kubectl rollout undo deployment.v1.apps/nginx-deployment
+or
 kubectl rollout undo deployment.v1.apps/nginx-deployment --to-revision=1
 
 ```
