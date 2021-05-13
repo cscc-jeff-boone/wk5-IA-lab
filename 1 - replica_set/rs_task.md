@@ -10,5 +10,6 @@ kubectl scale --replicas=3 -f manifests/replica_1.yml
 ### 2 - What happened after applying another pod with matching selectors as the ReplicaSet?
 
 ```
-enter answer here
+Nothing happened; I used kubectl describe pod nginx-pod along with kubectl describe rs nginx-replica and event message showed, "Container image "nginx:stable-alpine" already present on machine"
+
 ```
