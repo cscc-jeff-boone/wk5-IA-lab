@@ -1,5 +1,5 @@
 ### 1 - What did you observe when running the cron-app?
 
 ```
-enter answer here
+The cron-app created the pods then would terminate and repeat cycle. 
 ```
