@@ -1,24 +1,25 @@
 apiVersion: apps/v1
-kind: 
+kind: Deployment
 metadata:
-  name: 
+  name: nginx-deployment
 spec:
-  replicas: 
-  revisionHistoryLimit: 
+  replicas: 2
+  revisionHistoryLimit: 3
   selector:
     matchLabels:
       app_name: nginx
       env: dev
   strategy:
-    type: 
+    type: RollingUpdate
     rollingUpdate:
-      maxSurge: 
-      maxUnavailable: 
+      maxSurge: 1
+      maxUnavailable: 0
   template:
     metadata:
       labels:
         app_name: nginx
         env: dev
+        author: jboone3
     spec:
       containers:
       - name: nginx
